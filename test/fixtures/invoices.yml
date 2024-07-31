@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  employee: one
+  payroll_period: one
+  total_amount: 9.99
+
+two:
+  employee: two
+  payroll_period: two
+  total_amount: 9.99

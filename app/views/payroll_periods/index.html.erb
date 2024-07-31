@@ -1,0 +1,58 @@
+<h1>Payroll Periods for <%= @organization.name %></h1>
+
+<div data-controller="calendar" data-calendar-organization-id-value="<%= @organization.id %>">
+  <div class="payroll-wrapper">
+    <div class="payroll-container left-container">
+      <div class="column left-column">
+        <h4>Standard</h4>
+        
+        <button data-action="click->calendar#generatePayrollPeriod" data-period="weekly">Weekly</button><br />
+        <button data-action="click->calendar#generatePayrollPeriod" data-period="biweekly"> Biweekly</button><br />
+        <button data-action="click->calendar#generatePayrollPeriod" data-period="monthly"> Monthly</button><br />
+      </div>
+    </div>
+    <div class="payroll-container middle-container">
+      <div class="column middle-column">
+        <label for="start-date" class="form-label">Start Date</label>
+        <input type="date" id="start-date" placeholder="Start Date">
+        <br />
+        <br />
+
+        <h4>Custom Pay Period</h4>
+        
+        <input type="number" id="custom-period-days" placeholder="Number of Days" min="1">
+        <button data-action="click->calendar#generateCustomPayrollPeriods">Generate</button>
+        <br />
+      </div>
+    </div>  
+    <div class="payroll-container right-container">
+      <div class="column right-column">
+        <h4>Deletion</h4>
+        <button data-action="click->calendar#clearAllPayrollPeriods">Clear All Payroll Periods</button>
+        <button data-action="click->calendar#clearFuturePayrollPeriods">Clear Future Payroll Periods</button>
+      </div>
+    </div>
+  </div>
+  <div data-calendar-target="calendar" class="fullcalendar-container"></div>
+</div>
+
+<table align="center" id="payroll-table">
+  <thead>
+    <tr>
+      <th>Start Date</th>
+      <th>End Date</th>
+      <th>Period Type</th>
+    </tr>
+  </thead>
+  <tbody id="payroll-periods-body">
+    <% @payroll_periods.order(:start_date).each do |payroll_period| %>
+      <tr>
+        <td><%= payroll_period.start_date %></td>
+        <td><%= payroll_period.end_date %></td>
+        <td><%= payroll_period.period_type %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= turbo_stream_from @organization %>

@@ -1,0 +1,19 @@
+<h1>Invoices</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Employee</th>
+      <th>Payroll Period</th>
+      <th>Total Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @invoices.each do |invoice| %>
+      <tr>
+        <td><%= invoice.employee.name %></td>
+        <td><%= invoice.payroll_period.start_date %> - <%= invoice.payroll_period.end_date %></td>
+        <td><%= number_to_currency(invoice.total_amount) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

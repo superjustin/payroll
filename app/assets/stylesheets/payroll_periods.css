@@ -1,0 +1,56 @@
+
+#payroll-table {
+  width: 600px;
+}
+
+.payroll-buttons {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.payroll-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+.payroll-container {
+  display: flex;
+  width: 600px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.payroll-container label {
+  font-weight: 500;
+}
+.left-container {
+  width: 150px;
+}
+.middle-container {
+  width: 300px;
+}
+.right-container {
+  width: 300px;
+}
+.left-column, .middle-column, .right-column {
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+}
+.payroll-container h4 {
+  text-decoration: underline;
+  margin-bottom: 0px;
+}
+@media (max-width: 768px) {
+  .payroll-wrapper {
+      flex-direction: column;
+      align-items: center;
+  }
+  .left-container,
+  .middle-container,
+  .right-container {
+      width: 100%;
+  }
+}

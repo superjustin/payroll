@@ -1,0 +1,11 @@
+<h1>Organizations</h1>
+<ul>
+  <% @organizations.each do |organization| %>
+    <li>
+      <span class="org-title"><%= organization.name %></span>&nbsp;  
+      <%= link_to organization_payroll_periods_path(organization), 'aria-label' => 'View Payroll Periods', class: 'btn btn-link' do %>
+        <i class="bi bi-calendar3"></i>
+      <% end %>      
+    </li>    
+  <% end %>
+</ul>

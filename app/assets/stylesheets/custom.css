@@ -1,0 +1,88 @@
+/* Apply the Roboto font globally */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 1em;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+    text-align: center;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+    margin-top: 0;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+  }
+  
+  h2 {
+    font-size: 2em;
+    margin-bottom: 0.75em;
+  }
+  
+  h3 {
+    font-size: 1.75em;
+    margin-bottom: 1em;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 0.75em;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f0f0f0;
+    font-weight: 700;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  li {
+    margin: 0 0 0.5em 0;
+  }
+  
+  a {
+    color: #327041;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .custom-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2em 0;
+    text-align: center;
+  }
+
+  .header {
+    background-color: #00781a;
+    color: #fff;
+    padding: 1em 0;
+  }
+  
+  .footer {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2em;
+  }

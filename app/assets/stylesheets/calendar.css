@@ -1,0 +1,54 @@
+.fullcalendar-container {
+    width: 80%; /* Adjust the width as needed */
+    height: 710px; /* Adjust the height as needed */
+    margin: 0 auto; /* Center the calendar horizontally */
+    padding-bottom: 50px;
+  }
+  
+.fc {
+  max-width: 100%;
+  max-height: 100%;
+  font-family: 'Arial', sans-serif;
+}
+
+.fc .fc-scroller {
+  background-color: white;
+}
+
+.fc .fc-toolbar {
+  background-color: inherit;
+}
+
+.fc .fc-button-primary {
+  background-color: #327041;
+  border-color: #327041;
+}
+
+.fc .fc-daygrid-day-number, .fc .fc-col-header-cell-cushion {
+  color: #00781a;
+}
+
+.fc-event {
+  background-color: #4d9d95; 
+  border-color: #4d9d95; 
+}
+
+.fc-event-delete {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.fc .fc-event-title {
+  padding-left:6px;
+}
+.fc .event-end-marker {
+  position: absolute;
+  right: 3px;
+  top: 1px;
+}
+.fc .add-payroll-period-icon {
+  color: #00781a;
+  top: 0;
+  left: 5px;
+  position: relative;
+}

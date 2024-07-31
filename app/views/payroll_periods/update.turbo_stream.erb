@@ -1,0 +1,11 @@
+<%= turbo_stream.replace "payroll-periods-body" do %>
+  <tbody id="payroll-periods-body">
+    <% @payroll_periods.each do |payroll_period| %>
+      <tr>
+        <td><%= payroll_period.start_date %></td>
+        <td><%= payroll_period.end_date %></td>
+        <td><%= payroll_period.period_type %></td>
+      </tr>
+    <% end %>
+  </tbody>
+<% end %>
